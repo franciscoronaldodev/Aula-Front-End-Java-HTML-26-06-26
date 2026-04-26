@@ -23,7 +23,3 @@ Projeto de manipulação de objetos e arrays em JavaScript utilizando JSON e ite
 - Checagens
 - Página com resumo
 
-
-
-
-teste
