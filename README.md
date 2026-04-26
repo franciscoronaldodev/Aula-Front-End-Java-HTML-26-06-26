@@ -15,6 +15,7 @@ Projeto de manipulação de objetos e arrays em JavaScript utilizando JSON e ite
 
  Prints
 ![alt text](image.png)
+![alt text](image-1.png)
 
 
 - Console com listagem
