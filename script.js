@@ -1,6 +1,6 @@
-// ==============================
-// B.1 - Definição dos dados (JSON)
-// ==============================
+
+// Definição dos dados (JSON)
+
 
 const catalogo = [
     {
@@ -60,9 +60,9 @@ const catalogo = [
 ];
 
 
-// ==============================
-// B.2 - Acesso aos dados
-// ==============================
+
+// Dados
+
 
 console.log("CATÁLOGO COMPLETO:", catalogo);
 
@@ -80,28 +80,28 @@ if (catalogo[2].generos[1]) {
 }
 
 
-// ==============================
-// B.3 - Iterators
-// ==============================
 
-// A) forEach
+// Iterators
+
+
+
 console.log("\nLista de títulos:");
 catalogo.forEach(item => {
     console.log(`- [${item.tipo}] ${item.titulo} (${item.ano})`);
 });
 
 
-// B) map
+
 const titulosEmCaixaAlta = catalogo.map(item => item.titulo.toUpperCase());
 console.log("\nTítulos em maiúsculo:", titulosEmCaixaAlta);
 
 
-// C) filter
+
 const naoAssistidos = catalogo.filter(item => !item.assistido);
 console.log(`\nNão assistidos: ${naoAssistidos.length}`);
 
 
-// D) find
+
 const topFilme = catalogo.find(item => item.nota >= 9);
 
 if (topFilme) {
@@ -111,7 +111,7 @@ if (topFilme) {
 }
 
 
-// E) reduce
+
 
 // média geral
 const mediaGeral =
@@ -127,7 +127,6 @@ console.log("\nMédia geral:", mediaGeral.toFixed(2));
 console.log("Média assistidos:", mediaAssistidos.toFixed(2));
 
 
-// F) some e every
 
 const temAntigo = catalogo.some(item => item.ano < 2000);
 const todosTemGenero = catalogo.every(item => item.generos.length > 0);
@@ -136,16 +135,15 @@ console.log("\nExiste item antes de 2000?", temAntigo);
 console.log("Todos têm gênero?", todosTemGenero);
 
 
-// ==============================
+
 // B.4 - Saída na tela (DOM)
-// ==============================
 
 const total = catalogo.length;
 
 const filmes = catalogo.filter(item => item.tipo === "filme").length;
 const series = catalogo.filter(item => item.tipo === "serie").length;
 
-// ranking top 3
+
 const ranking = [...catalogo]
     .sort((a, b) => b.nota - a.nota)
     .slice(0, 3);
